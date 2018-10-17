@@ -1,0 +1,46 @@
+---
+title: "Assignment 2 Part 1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Step 6
+```{r}
+trueA <- 5
+trueB <- 0
+trueSd <- 10
+sampleSize <- 31
+
+source('function.R')
+compare_outcomes<-function(iteration){
+  burnIn=0.5*iteration #set the burnIn value, which we choose values only after burnIn
+  for(i in 1:10){ #every loop
+    startvalue=c(runif(1)*10,runif(1)*5,runif(1)*20) #set the random startvalue
+    chain=run_metropolis_MCMC(startvalue,iteration) #compute the chain
+    a=chain[-(1:burnIn),1] #get a from the chain
+    abar=mean(a) #compute the mean of a
+    astd=sqrt(sum((a-abar)^2)/length(a)) #compute the std of a
+    print(abar) #print mean of a
+    print(astd) #print std of a
+  }
+}
+
+x <- (-(sampleSize-1)/2):((sampleSize-1)/2)
+# create dependent values according to ax + b + N(0,sd)
+y <-  trueA * x + trueB + rnorm(n=sampleSize,mean=0,sd=trueSd)
+
+plot(x,y, main="Test Data")
+
+######## Metropolis algorithm ################
+
+compare_outcomes(1000)
+compare_outcomes(10000)
+compare_outcomes(100000)
+
+```
+We can see that the true value of a is 5, and with different number of iterations, we can see that the value of a is very near to 5.
+
+So we can conclude that even if this algorithm can't find the accurate a, but the result is really near to the true value of a. So this algorithm is very useful helping us find the value of the parameter.

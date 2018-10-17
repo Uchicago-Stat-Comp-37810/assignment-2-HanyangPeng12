@@ -5,7 +5,7 @@ sampleSize <- 31
 
 source('function.R')
 compare_outcomes<-function(iteration){
-  burnIn=0.4*iteration #set the burnIn value, which we choose values only after burnIn
+  burnIn=0.5*iteration #set the burnIn value, which we choose values only after burnIn
   for(i in 1:10){ #every loop
     startvalue=c(runif(1)*10,runif(1)*5,runif(1)*20) #set the random startvalue
     chain=run_metropolis_MCMC(startvalue,iteration) #compute the chain

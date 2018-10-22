@@ -1,3 +1,6 @@
+# STAT 37810 Assignment 2
+# Author: Hanyang Peng
+
 trueA <- 5 #set the beta1 of the model
 trueB <- 0 #set the beta0 of the model
 trueSd <- 10 #set the standard variance of the model

@@ -1,3 +1,6 @@
+# STAT 37810 Assignment 2
+# Author: Hanyang Peng
+
 print("I will now count my chickens:") #this will print what showed in the "" part
 
 print("Hens", 25 + 30 / 6) #print the number of hens, by calculate the answer of 25+30/6

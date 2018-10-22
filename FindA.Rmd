@@ -1,5 +1,6 @@
 ---
 title: "Assignment 2 Part 1"
+author: "Hanyang Peng"
 output: html_document
 ---
 

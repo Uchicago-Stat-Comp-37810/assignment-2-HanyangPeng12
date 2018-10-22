@@ -1,3 +1,6 @@
+# STAT 37810 Assignment 2
+# Author: Hanyang Peng
+
 trueA <- 5
 trueB <- 0
 trueSd <- 10

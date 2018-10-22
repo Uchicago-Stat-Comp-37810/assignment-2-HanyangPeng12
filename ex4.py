@@ -1,3 +1,6 @@
+# STAT 37810 Assignment 2
+# Author: Hanyang Peng
+
 cars = 100
 space_in_a_car = 4.0
 drivers = 30

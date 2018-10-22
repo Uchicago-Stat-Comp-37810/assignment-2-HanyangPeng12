@@ -1,3 +1,6 @@
+# STAT 37810 Assignment 2
+# Author: Hanyang Peng
+
 # A comment, this is so you can read your program later.
 # Anything after the # is ignored by python.
 
